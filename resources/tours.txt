@@ -1,0 +1,5 @@
+Ruta Sabores del Sur;Frutillar;25000;gastronómico
+Paseo Lago Llanquihue;Puerto Varas;30000;lacustre
+Tour Museo Colonial;Llanquihue;18000;cultural
+Ruta Patrimonial;Puerto Octay;22000;patrimonial
+Tour a Medida;Ensenada;45000;personalizado
