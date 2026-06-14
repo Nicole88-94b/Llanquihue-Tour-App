@@ -2,10 +2,12 @@
 
 ## Descripción
 
-Proyecto Java desarrollado para la asignatura Programación Orientada a Objetos I.  
-El sistema permite leer información de tours desde un archivo externo `tours.txt`, crear objetos de tipo `Tour`, almacenarlos en un `ArrayList` y aplicar operaciones basicas como recorrido y filtrado.
+Este proyecto realizado con lenguaje Java fue desarrollado para la asignatura Programación Orientada a Objetos I.  
+El sistema diseñado permite leer información de tours desde un archivo externo `tours.txt`, crear objetos de tipo 
+`Tour`, almacenarlos en un `ArrayList` y aplicar operaciones básicas como recorrido y filtrado.
 
-El caso está basado en la agencia de turismo Llanquihue Tour, que necesita organizar sus servicios turisticos segun tipo, destino y precio.
+Este caso está basado en la agencia de turismo Llanquihue Tour, que necesita organizar sus servicios turísticos 
+según tipo, destino y precio.
 
 ## Estructura del proyecto
 
@@ -31,22 +33,23 @@ LlanquihueTourApp/
 - `GestorDatos`: clase encargada de leer el archivo tours.txt, separar los datos con split(";"), crear objetos Tour y almacenarlos en un ArrayList.
 - `Main`: clase principal donde se recorre la colección completa y se filtran tours según una condición.
 
-### Archivo de datos
+## Archivo de datos
 
-El archivo `tours.txt` se encuentra en la carpeta resources/.
-Cada línea contiene datos separados por punto y coma:
-nombre;destino;precio;tipo
+- El archivo `tours.txt` se encuentra en la carpeta `resources/`.
+Cada línea contiene datos separados por punto y coma en el formato:
+"Nombre;Destino;Precio;Tipo"
+
 - Ejemplo:
-Ruta Sabores del Sur;Frutillar;25000;gastronomico
+Ruta Sabores del Sur;Frutillar;25000;gastronómico
 
 ## Funcionalidades
 
-- Lectura de datos desde archivo .txt.
+- Lectura de datos desde archivo.txt.
 - Separación de datos utilizando split (";").
 - Creación de objetos Tour.
 - Almacenamiento de objetos en un ArrayList.
 - Recorrido de la colección completa.
-- Filtrado de tours según una condición.
+- Filtrado de tours según una condición preestablecida.
 - Asignación de códigos por tipo de tour mediante HashMap.
 
 ## Instrucciones de ejecución
