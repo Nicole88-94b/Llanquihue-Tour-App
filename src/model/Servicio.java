@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Clase modelo base para servicios. Podrá heredar a otras clases hijas.
+ * Clase base que contiene los datos comunes de los servicios turísticos.
  */
 public class Servicio {
     private String codigo;
@@ -10,11 +10,12 @@ public class Servicio {
     private double precio;
 
     /**
-     * Constructor del objeto servicio el cual tiene los atributos asociados:
-     * @param codigo para asignar un código que a futuro sirva para filtrar los servicios;
-     * @param nombre nombre del recorrido o ruta;
-     * @param destino lugar hacia donde se realizarán las actividades;
-     * @param precio valor total del tour por persona.
+     * Crea un servicio con sus datos principales.
+     *
+     * @param codigo código utilizado para identificar y filtrar el servicio
+     * @param nombre nombre del recorrido o ruta
+     * @param destino lugar donde se realizarán las actividades
+     * @param precio valor total del servicio por persona
      */
     public Servicio(String codigo, String nombre, String destino, double precio) {
         this.codigo = codigo;
@@ -56,13 +57,14 @@ public class Servicio {
     }
 
     /**
-     * Manejo de la estructura de impresión por consola
-     * @return La plantilla base del servicio.
+     * Devuelve una representación textual del servicio.
+     *
+     * @return datos principales del servicio
      */
     @Override
     public String toString() {
         return "Servicio " +
-                "\nCódigo: " + codigo  +
+                "\nCódigo: " + codigo +
                 ", \nNombre: " + nombre +
                 ", \nDestino: " + destino +
                 ", \nPrecio: $" + precio;

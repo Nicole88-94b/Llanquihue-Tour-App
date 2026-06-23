@@ -6,28 +6,25 @@ import model.Tour;
 import java.util.ArrayList;
 
 /**
- * Clase Principal del proyecto. Se encarga de revisar los tours realizados y filtrarlos según necesidad.
+ * Clase principal que carga, muestra y filtra los tours.
  */
 public class Main {
-    public static void main(String[] args) {
 
-        GestorDatos gestor = new GestorDatos();
+    public static void main(String[] args) {
+        GestorDatos gestor = new GestorDatos("resources/tours.txt");
         ArrayList<Tour> tours = gestor.listaTours();
 
-        System.out.println("----------------------------Todos los tours realizados en el mes----------------------------");
+        System.out.println("--------------------- Todos los tours ---------------------");
         for (Tour tour : tours) {
             System.out.println(tour);
-            System.out.println("------------------------------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------");
         }
 
-        System.out.println();
-        System.out.println("------------------------------------Tours filtrados---------------------------------------");
+        System.out.println("\n---------------- Tours culturales ----------------");
         for (Tour tour : tours) {
-        if (tour.getCodigo().equals("03CU")) {
-
-            System.out.println("Servicio: " + tour.getNombre());
-            System.out.println("Precio: $" + tour.getPrecio());
-        } }
-
+            if ("03CU".equals(tour.getCodigo())) {
+                System.out.println(tour);
+            }
+        }
     }
 }

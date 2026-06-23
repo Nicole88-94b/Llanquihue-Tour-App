@@ -1,13 +1,26 @@
 package model;
 
 /**
- * Clase Hija de Servicio. Sirve como ejemplo de futuras hijas si se expande el negocio.
+ * Representa un tour turístico asociado a un guía responsable.
  */
-public class Tour extends Servicio{
+public class Tour extends Servicio {
     private String tipo;
-    public Tour(String codigo, String nombre, String destino, double precio, String tipo) {
+    private Guia guia;
+
+    /**
+     * Crea un tour con sus datos principales y el guía asignado.
+     *
+     * @param codigo código del servicio
+     * @param nombre nombre del tour
+     * @param destino destino del recorrido
+     * @param precio precio por persona
+     * @param tipo categoría del tour
+     * @param guia guía responsable del recorrido
+     */
+    public Tour(String codigo, String nombre, String destino, double precio, String tipo, Guia guia) {
         super(codigo, nombre, destino, precio);
         this.tipo = tipo;
+        this.guia = guia;
     }
 
     public String getTipo() {
@@ -18,12 +31,23 @@ public class Tour extends Servicio{
         this.tipo = tipo;
     }
 
+    public Guia getGuia() {
+        return guia;
+    }
+
+    public void setGuia(Guia guia) {
+        this.guia = guia;
+    }
+
     /**
-     * Manejo de la salida por consola del atributo específico de "Tour"
-     * @return La impresión completa del Servicio-Tour.
+     * Devuelve una representación textual completa del tour.
+     *
+     * @return datos del servicio, tipo de tour y guía responsable
      */
     @Override
     public String toString() {
-        return super.toString() + "\nTipo de tour: " + tipo  + ".";
+        return super.toString()
+                + "\nTipo de tour: " + tipo
+                + "\nGuía responsable: " + guia + ".";
     }
 }

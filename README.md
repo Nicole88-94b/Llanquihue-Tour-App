@@ -2,62 +2,56 @@
 
 ## Descripción
 
-Este proyecto realizado con lenguaje Java fue desarrollado para la asignatura Programación Orientada a Objetos I.  
-El sistema diseñado permite leer información de tours desde un archivo externo `tours.txt`, crear objetos de tipo 
-`Tour`, almacenarlos en un `ArrayList` y aplicar operaciones básicas como recorrido y filtrado.
+Aplicación Java para gestionar tours de la agencia Llanquihue Tour. El sistema 
+lee datos desde un archivo de texto, valida su contenido, crea objetos y los 
+almacena en un ArrayList. Luego muestra la colección completa y filtra tours por 
+código.
 
-Este caso está basado en la agencia de turismo Llanquihue Tour, que necesita organizar sus servicios turísticos 
-según tipo, destino y precio.
-
-## Estructura del proyecto
-
+## Estructura
 ```text
 LlanquihueTourApp/
-├── src/
-│   ├── model/
-│   │   ├── Servicio.java
-│   │   └── Tour.java
-│   ├── data/
-│   │   └── GestorDatos.java
-│   └── ui/
-│       └── Main.java
-├── resources/
-│   └── tours.txt
-└── README.md
-
+  src/
+    model/
+      Servicio.java
+      Tour.java
+      Guia.java
+    data/
+      GestorDatos.java
+    ui/
+      Main.java
+  resources/
+    tours.txt
+  README.md
 ```
-## Clases Implementadas
+## Paquetes y clases
 
-- `Servicio`: clase base que contiene atributos comunes como código, nombre, destino y precio.
-- `Tour`: clase que hereda de Servicio y agrega el tipo de tour.
-- `GestorDatos`: clase encargada de leer el archivo tours.txt, separar los datos con split(";"), crear objetos Tour y almacenarlos en un ArrayList.
-- `Main`: clase principal donde se recorre la colección completa y se filtran tours según una condición.
+- `model.Servicio`: clase base con código, nombre, destino y precio.
+- `model.Tour`: hereda de Servicio, agrega el tipo y contiene un objeto Guía.
+- `model.Guia`: representa al guía responsable y sus datos de contacto.
+- `data.GestorDatos`: lee y valida el archivo, crea objetos y los guarda en un ArrayList.
+- `ui.Main`: ejecuta la carga, muestra todos los tours y filtra los tours culturales.
 
 ## Archivo de datos
 
-- El archivo `tours.txt` se encuentra en la carpeta `resources/`.
-Cada línea contiene datos separados por punto y coma en el formato:
-"Nombre;Destino;Precio;Tipo"
+El archivo resources/tours.txt utiliza seis campos separados por punto y coma:
 
-- Ejemplo:
-Ruta Sabores del Sur;Frutillar;25000;gastronómico
+nombre;destino;precio;tipo;guia;telefono
 
-## Funcionalidades
+## Validaciones
 
-- Lectura de datos desde archivo.txt.
-- Separación de datos utilizando split (";").
-- Creación de objetos Tour.
-- Almacenamiento de objetos en un ArrayList.
-- Recorrido de la colección completa.
-- Filtrado de tours según una condición preestablecida.
-- Asignación de códigos por tipo de tour mediante HashMap.
+- Cantidad correcta de campos.
+- Campos obligatorios no vacíos.
+- Precio numérico y mayor que cero.
+- Tipo de tour reconocido.
+- Manejo de errores de lectura con try-catch.
 
-## Instrucciones de ejecución
-- Abrir el proyecto en IntelliJ IDEA.
-- Verificar que el archivo `tours.txt` se encuentre dentro de la carpeta resources.
-- Abrir la clase Main, ubicada en el paquete ui.
-- Ejecutar el método main().
-- Revisar la salida generada en consola.
+## Ejecución
 
-### Autora
+1. Abrir el proyecto en IntelliJ IDEA.
+2. Verificar que tours.txt este dentro de resources.
+3. Ejecutar la clase Main del paquete ui.
+4. Revisar la carga completa y el filtro en consola.
+
+## Autora
+
 Nicole Ortega

@@ -1,5 +1,5 @@
-Ruta Sabores del Sur;Frutillar;25000;gastronómico
-Paseo Lago Llanquihue;Puerto Varas;30000;lacustre
-Tour Museo Colonial;Llanquihue;18000;cultural
-Ruta Patrimonial;Puerto Octay;22000;patrimonial
-Tour a Medida;Ensenada;45000;personalizado
+Ruta Sabores del Sur;Frutillar;25000;gastronómico;Camila Soto;+56956732190
+Paseo Lago Llanquihue;Puerto Varas;30000;lacustre;Felipe Rojas;+56921145678
+Tour Museo Colonial;Llanquihue;18000;cultural;Daniela Perez;+56932996712
+Ruta Patrimonial;Puerto Octay;22000;patrimonial;Martin Silva;+56944678800
+Tour a tu medida;Ensenada;45000;personalizado;Carolina Diaz;+56955881212
