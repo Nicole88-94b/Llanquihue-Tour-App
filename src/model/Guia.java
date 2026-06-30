@@ -15,7 +15,7 @@ public class Guia {
      */
     public Guia(String nombre, String telefono) {
         this.nombre = nombre;
-        this.telefono = telefono;
+        setTelefono(telefono);
     }
 
     public String getNombre() {
@@ -26,11 +26,15 @@ public class Guia {
         this.nombre = nombre;
     }
 
-    public String getTelefono() {
+    public String getTelefono()  {
+
         return telefono;
     }
 
     public void setTelefono(String telefono) {
+        if (telefono == null || telefono.trim().isEmpty()) {
+            throw new IllegalArgumentException("El teléfono del guía no puede estar vacío.");
+        }
         this.telefono = telefono;
     }
 

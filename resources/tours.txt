@@ -1,5 +1,6 @@
-Ruta Sabores del Sur;Frutillar;25000;gastronómico;Camila Soto;+56956732190
-Paseo Lago Llanquihue;Puerto Varas;30000;lacustre;Felipe Rojas;+56921145678
-Tour Museo Colonial;Llanquihue;18000;cultural;Daniela Perez;+56932996712
-Ruta Patrimonial;Puerto Octay;22000;patrimonial;Martin Silva;+56944678800
-Tour a tu medida;Ensenada;45000;personalizado;Carolina Diaz;+56955881212
+01GA; Ruta Sabores del Sur;Frutillar;25000;5;Camila Soto;+56956732190;4
+02LA; Paseo Lago Llanquihue;Puerto Varas;30000;6;Felipe Rojas;+56921145678; Lancha
+03CU; Tour Museo Colonial;Llanquihue;18000;4;Daniela Perez;+56932996712; Museo colonial
+03CU; Ruta Patrimonial;Puerto Octay;22000;5;Martin Silva;+56944678800; Casa patrimonial
+02LA; Tour a tu medida;Ensenada;45000;4;Carolina Diaz;+56955881212; Barco
+01GA; Ruta del Kuchen;Puerto Varas;20000;3;Ana Morales;+56912345678;3

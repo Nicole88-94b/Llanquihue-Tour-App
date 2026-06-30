@@ -1,30 +1,30 @@
 package ui;
 
-import data.GestorDatos;
-import model.Tour;
+import data.GestorServicios;
+import model.ServicioTuristico;
 
 import java.util.ArrayList;
 
 /**
- * Clase principal que carga, muestra y filtra los tours.
+ * Clase principal que carga, muestra y filtra los servicios turísticos.
  */
 public class Main {
 
     public static void main(String[] args) {
-        GestorDatos gestor = new GestorDatos("resources/tours.txt");
-        ArrayList<Tour> tours = gestor.listaTours();
+        GestorServicios gestor = new GestorServicios("resources/tours.txt");
+        ArrayList<ServicioTuristico> tours = gestor.listaTours();
 
-        System.out.println("--------------------- Todos los tours ---------------------");
-        for (Tour tour : tours) {
+        System.out.println("--------------------- Todos los tours ----------------------------");
+        for (ServicioTuristico tour : tours) {
             System.out.println(tour);
-            System.out.println("-----------------------------------------------------");
+            System.out.println("----------------------------------------------------------------");
         }
-
-        System.out.println("\n---------------- Tours culturales ----------------");
-        for (Tour tour : tours) {
-            if ("03CU".equals(tour.getCodigo())) {
-                System.out.println(tour);
-            }
+        System.out.println("------------------- Todos los tours filtrados -------------------");
+        for  (ServicioTuristico tour : tours) {
+            if ("03CU".equals(tour.getCodigo())){
+            System.out.println(tour);
+            System.out.println("-----------------------------------------------------------");
+        }
         }
     }
 }

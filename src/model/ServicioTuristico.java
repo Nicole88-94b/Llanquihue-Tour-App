@@ -3,11 +3,14 @@ package model;
 /**
  * Clase base que contiene los datos comunes de los servicios turísticos.
  */
-public class Servicio {
+public class ServicioTuristico {
     private String codigo;
     private String nombre;
     private String destino;
     private double precio;
+    private double duracionHoras;
+    private Guia guia;
+
 
     /**
      * Crea un servicio con sus datos principales.
@@ -16,12 +19,16 @@ public class Servicio {
      * @param nombre nombre del recorrido o ruta
      * @param destino lugar donde se realizarán las actividades
      * @param precio valor total del servicio por persona
+     * @param duracionHoras total de horas que durará el servicio
+     * @param guia guía responsable del recorrido
      */
-    public Servicio(String codigo, String nombre, String destino, double precio) {
+    public ServicioTuristico(String codigo, String nombre, String destino, double precio, double duracionHoras, Guia guia) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.destino = destino;
-        this.precio = precio;
+        setPrecio(precio);
+        setDuracionHoras(duracionHoras);
+       this.guia = guia;
     }
 
     public String getCodigo() {
@@ -53,7 +60,29 @@ public class Servicio {
     }
 
     public void setPrecio(double precio) {
+           if (precio <= 0) {
+               throw new IllegalArgumentException("El precio debe ser mayor que cero.");
+           }
         this.precio = precio;
+    }
+
+    public double getDuracionHoras() {
+        return duracionHoras;
+    }
+
+    public void setDuracionHoras(double duracionHoras) {
+        if (duracionHoras <= 0) {
+            throw new IllegalArgumentException("El número de horas debe ser mayor que cero.");
+        }
+        this.duracionHoras = duracionHoras;
+    }
+
+    public Guia getGuia() {
+        return guia;
+    }
+
+    public void setGuia(Guia guia) {
+        this.guia = guia;
     }
 
     /**
@@ -63,10 +92,13 @@ public class Servicio {
      */
     @Override
     public String toString() {
-        return "Servicio " +
+        return "Servicio Turístico programado: " +
                 "\nCódigo: " + codigo +
-                ", \nNombre: " + nombre +
-                ", \nDestino: " + destino +
-                ", \nPrecio: $" + precio;
+                " \nNombre: " + nombre +
+                " \nDestino: " + destino +
+                " \nPrecio: $" + precio +
+                " \nDuración en horas: " + duracionHoras
+                + "\nGuía responsable: " + guia + ".";
+
     }
 }
